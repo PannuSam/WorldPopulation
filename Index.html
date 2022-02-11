@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>World Population</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <div class="layout">
+        <div class="main-header"><b>
+            World Population Meter</b>
+            <span class="text-wp" id="text-wp">To Check World's Population</span>
+            <button class="button button-change" id="totalPopulation">
+               Click Here</button>
+        </div>
+        <div class="search-by-country">
+            <div class="by-country">
+                Check Population By Country
+                <div class="searching">
+                    <input type="text" id="search" placeholder="country">
+                    <button class="go" id="searchbutton">GO</button>
+                </div>
+            </div>
+            <div class="all-countries"> Check Population of All Countries <button class="button button-change" id="allCountries">Click Here</button>
+            </div>
+        </div>
+        <tbody>
+            <tr>
+                <td colspan="4">
+                    <div class="scroll">
+                        <table id="countriesPopulation">
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Country</th>
+                                <th>Population</th>
+                                <th>Ranking</th>
+                                <th>World Share</th>
+                            </tr>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+
+    </div>
+    <script src="./js/script.js"></script>
+    </script>
+
+</body>
+
+</html>

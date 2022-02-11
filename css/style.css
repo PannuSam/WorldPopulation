@@ -1,0 +1,168 @@
+body {
+    height: 100vh;
+    background: url(../asset/background/bg.jpg);
+    background-size: cover;
+}
+
+.layout {
+    display: flex;
+    flex-grow: 3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.main-header {
+    display: flex;
+    flex-grow: 3;
+    flex-direction: column;
+    padding-top: 2.5em;
+    font-size: 1.9rem;
+    font-family: Georgia, 'Times New Roman';
+    font-weight: normal;
+    text-align: justify;
+    color: rgb(2, 80, 110);
+}
+
+.text-wp {
+    padding-top: 2.5em;
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman';
+    font-weight: normal;
+    text-align: justify;
+    color: rgb(2, 80, 110);
+}
+
+.button {
+    display: block;
+    width: 245px;
+    margin: 3em;
+    padding: 1.3em 3em;
+    border: 3px solid;
+    background: none;
+    font-size: 0.5em;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: inherit;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+}
+
+.button-change::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3.5em, 0);
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3.5em, 0);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, background-color 0.4s;
+    transition: transform 0.4s, opacity 0.4s, background-color 0.4s;
+}
+
+.searching {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: row;
+}
+
+.go {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-top: 3.3em;
+    padding: 0.5em 0.6em;
+    border: 3px solid;
+    background: none;
+    font-size: 0.5em;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: inherit;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+}
+
+.button-change:hover {
+    color: rgb(255, 255, 255);
+    border-color: rgb(2, 80, 110);
+    ;
+}
+
+.button-change:hover::before {
+    opacity: 1;
+    background-color: rgb(2, 80, 110);
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transition-timing-function: cubic-bezier(0.3, 1.2, 0.4, 1.2);
+    transition-timing-function: cubic-bezier(0.3, 1.1, 0.3, 1);
+}
+
+.search-by-country {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: row;
+    font-size: 1.3rem;
+    font-family: Georgia, 'Times New Roman';
+    font-weight: normal;
+    text-align: justify;
+    justify-content: center;
+    color: rgb(2, 80, 110);
+}
+
+.all-countries {
+    margin-left: 2em;
+}
+
+#search {
+    width: 80%;
+    font-size: 16px;
+    padding: 12px 2px 12px 8px;
+    margin: 2em;
+}
+
+#countriesPopulation {
+    width: 100%;
+    font-family: Georgia, 'Times New Roman';
+    border-collapse: collapse;
+    display: none;
+}
+
+#countriesPopulation td,
+#countriesPopulation th {
+    border: 2px solid #ddd;
+    padding: 8px;
+}
+
+#countriesPopulation tr:nth-child(even) {
+    background-color: #faf7dc;
+}
+
+#countriesPopulation tr:hover {
+    background-color: rgb(187, 158, 240);
+}
+
+#countriesPopulation th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(2, 80, 110);
+    color: white;
+}
+
+.scroll {
+    overflow: scroll;
+    height: 232px;
+}
