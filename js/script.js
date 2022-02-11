@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.location.reload();
     }
 
+    //Fetches current total population
     function totalPopulationfunc() {
         console.log("inside totalPopulationfunc function");
         fetch("https://world-population.p.rapidapi.com/worldpopulation", {
@@ -66,13 +67,13 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     }
 
+    //Displays total population on UI
     function displayPopulation(resp) {
         console.log("inside displayPopulation function");
         textwp.textContent = "Current Total Population is : " + `${resp.body.world_population}`;
-
-
     }
 
+    // Fetches all countries name
     function allCountriesfunc() {
         console.log("inside allCountriesfunc function");
         fetch("https://world-population.p.rapidapi.com/allcountriesname", {
@@ -90,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.error(err);
             });
     }
-
+    //Passing Country's names to another function to get all the details of that country.
     function displayAllCountries(resp) {
         console.log("inside displayAllCountries function");
         len = resp.body.countries.length;
@@ -99,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    //Fetches data by country name
     function checkByCountry(count, len) {
         console.log("inside checkByCountry function");
         fetch("https://world-population.p.rapidapi.com/population?country_name=" + count, {
@@ -117,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     }
 
+    //Display Country's data on UI by setting the info into table
     function displayCountry(resp, len) {
         console.log("inside displayCountry function");
         var table = document.getElementById('countriesPopulation');
@@ -138,6 +141,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    //Pass place holder value to fetch it's details
     function searchfun() {
         console.log("inside searchfun function");
         filter = search.value;
